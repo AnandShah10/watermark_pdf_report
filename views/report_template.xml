@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!--    <template id="report_layout_inherit" inherit_id="web.report_layout">-->
+    <!--        <xpath expr="//div[@id='wrapwrap']//main" position="inside">-->
+    <!--            <t t-set="config" t-value="env['res.config.settings'].get_watermark_config()"/>-->
+    <!--            <t t-esc="config"/>-->
+    <!--            <t t-if="config.get('module_watermark_active')">-->
+    <!--                <t t-if="config.get('watermark_type') == 'text'">-->
+    <!--                    <div t-att-style="'position: fixed; opacity: ' + str(config.get('watermark_opacity')) +-->
+    <!--                                     '; color: ' + config.get('watermark_color') +-->
+    <!--                                     '; font-size: ' + str(config.get('watermark_fontsize')) + 'px' +-->
+    <!--                                     '; transform: rotate(' + str(config.get('watermark_rotation')) + 'deg)' +-->
+    <!--                                     '; top: ' + (config.get('margin_top') or '50%') +-->
+    <!--                                     '; left: ' + (config.get('margin_left') or '50%') +-->
+    <!--                                     '; text-align: center;'">-->
+    <!--                        <t t-esc="config.get('watermark_text')"/>-->
+    <!--                    </div>-->
+    <!--                </t>-->
+    <!--                <t t-if="config.get('watermark_type') == 'image'">-->
+    <!--                    <div t-att-style="'position: fixed; opacity: ' + str(config.get('watermark_opacity')) +-->
+    <!--                                     '; width: ' + str(config.get('watermark_width')) + 'px' +-->
+    <!--                                     '; height: ' + str(config.get('watermark_height')) + 'px' +-->
+    <!--                                     '; margin-right: ' + (config.get('margin_right') or '50%') +-->
+    <!--                                     '; margin-bottom: ' + (config.get('margin_bottom') or '50%') +-->
+    <!--                                     '; margin-top: ' + (config.get('margin_top') or '50%') +-->
+    <!--                                     '; margin-left: ' + (config.get('margin_left') or '50%') + ';'">-->
+    <!--                        <img t-att-src="'data:image/png;base64,' + config.get('watermark_image')"-->
+    <!--                             style="width: 100%; height: 100%;"/>-->
+    <!--                    </div>-->
+    <!--                </t>-->
+    <!--            </t>-->
+    <!--&lt;!&ndash;            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&ndash;&gt;-->
+    <!--             <t t-if="config.get('watermark_active')">-->
+    <!--                <t t-if="config.get('watermark_type') == 'text'">-->
+    <!--                    <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">-->
+    <!--                        <t t-esc="config.get('watermark_text')"/>-->
+    <!--                    </div>-->
+    <!--                </t>-->
+    <!--                <t t-if="config.get('watermark_type') == 'image'">-->
+    <!--                    <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">-->
+    <!--                        <img t-att-src="'data:image/png;base64,' + config.get('watermark_image')"-->
+    <!--                             style="width: 100px; height: 100px;"/>-->
+    <!--                    </div>-->
+    <!--                </t>-->
+    <!--            </t>-->
+    <!--        </xpath>-->
+    <!--    </template>-->
+
+
+<!--    <template id="report_layout_inherit" inherit_id="web.internal_layout">-->
+<!--        <xpath expr="//div[@class='article']//t" position="inside">-->
+<!--            <div style="position: absolute;font-size:100px ;text-align:center;-webkit-transform: rotate(-30deg); color: red; z-index: 99;opacity=0.2;">-->
+<!--                <span>This is a test watermark</span>-->
+<!--            </div>-->
+<!--        </xpath>-->
+<!--    </template>-->
+</odoo>

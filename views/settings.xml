@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_res_config_settings_watermark" model="ir.ui.view">
+        <field name="name">res.config.settings.watermark</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='invite_users']" position="before">
+                <div id="pdf_watermark_settings">
+                    <block name="pdf_watermark_block" title="PDF Watermark"
+                    help="Universal Watermark Settings">
+                        <settings name="pdf_watermark_settings" help="Give watermark to all reports">
+                            <group>
+                                <field name="watermark_active" widget="boolean_toggle"
+                                help="Enable watermark to report"/>
+                            </group>
+                        </settings>
+                        <div class="row">
+                        <settings name="set_watermark_type" help="Select type of Watermark">
+                            <div class="row">
+                                    <label for="watermark_type">Type:</label>
+                                    <field name="watermark_type" readonly="not watermark_active"
+                                           default="False" widget="radio"/>
+                            </div>
+                        </settings>
+                        <settings id="set_watermark_position" help="Select Watermark Position">
+                            <div class="row">
+                                <label for="watermark_position">Position:</label>
+                                <field name="watermark_position" readonly="not watermark_active"
+                                       default="False" widget="radio"/>
+                                </div>
+                        </settings>
+                        </div>
+                        <div class="row">
+                        <settings id="watermark_text_settings" help="To give Watermark style" class="col-5">
+                            <div invisible="watermark_type != 'text' or (not watermark_active)">
+                                <label for="watermark_text" help="Give text for watermark">Text:</label>
+                                <field name="watermark_text" default="watermark"/>
+                                <br/>
+                                <label for="watermark_rotation"
+                                       help="Give rotation angle to the watermark text">Rotation:</label>
+                                <field name="watermark_rotation"/>
+                                <br/>
+                                <label for="watermark_fontsize"
+                                help="Give fontsize to watermark text">Fontsize:</label>
+                                <field name="watermark_fontsize"/>
+                                <br/>
+                                <label for="watermark_color"
+                                help="Give color to watermark text">Color:</label>
+                                <field name="watermark_color"/>
+                                <br/>
+                                <label for="watermark_opacity"
+                                help="Give opacity to watermark text">Opacity:</label>
+                                <field name="watermark_opacity"/>
+                                <br/>
+                            </div>
+                        </settings>
+                        <settings id="watermark_image_settings" string="Watermark Image/PDF">
+                            <div invisible="watermark_type != 'image' or (not watermark_active)" class="content-group">
+                                <label for="watermark_image"
+                                help="Give Image/PDF for watermark.
+                                Note the pdf does not support height,width or opacity!">
+                                    Image/PDF:</label>
+                                <field name="watermark_image"
+                                       help="Image or PDF to be displayed as watermark"/>
+                                <br/>
+                                <label for="watermark_height"
+                                help="Give height to watermark image">Height:</label>
+                                <field name="watermark_height"/>
+                                <br/>
+                                <label for="watermark_width"
+                                help="Give width to watermark image">Width:</label>
+                                <field name="watermark_width"/>
+                                <br/>
+                                <label for="watermark_image_opacity"
+                                help="Give opacity to watermark image">Opacity:</label>
+                                <field name="watermark_image_opacity"/>
+                                <br/>
+                            </div>
+                        </settings>
+                        <settings id="custom_watermark_position" string="Custom Position">
+                            <div invisible="watermark_position != 'custom' or (not watermark_active)"
+                                 class="content-group">
+                                <label for="margin_bottom"
+                                help="Give margin-bottom to watermark in order to set the position"
+                                >Margin Bottom:</label>
+                                <field name="margin_bottom"/>
+                                <br/>
+                                <label for="margin_left"
+                                help="Give margin-left to watermark in order to set the position">
+                                    Margin Left:</label>
+                                <field name="margin_left"/>
+                                <br/>
+                            </div>
+                        </settings>
+                        </div>
+                    </block>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

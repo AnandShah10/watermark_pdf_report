@@ -1,5 +1,5 @@
 Universal PDF Watermark Module for Odoo
-=============================
+=======================================
 
 This module provides functionality to add image, PDF, and text watermarks to your PDF reports in Odoo with customizable positions and settings.
 
